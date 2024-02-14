@@ -1,0 +1,417 @@
+body {
+    background-color: #e2baba;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.xl-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.xl-container .cover {
+    cursor: pointer;
+    background-color: #fe8f95;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    font-weight: 800;
+    color: #facfeb;
+    transition: 1s ease-in-out;
+}
+
+.xl-container .cover p {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.xl-container .cover1 {
+    cursor: pointer;
+    background-color: #9c282e;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 90px;
+    font-weight: 800;
+    color: #facfeb;
+    transition: 1s ease-in-out;
+}
+
+.xl-container .cover1 p {
+    margin-top: 0px;
+    width: 500px;
+    height: 400px;
+}
+
+.xl-container .container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    /* border-radius: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.xl-container .envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+
+/* belakang */
+.xl-container .back-side {
+    top: 33.3%;
+    left: 19.75%;
+    width: 302px;
+    height: 208px;
+    border-radius: 10px;
+    background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 43%), #ffb6c0;
+    /* background-color: #ffb6c0; */
+    position: absolute;
+    box-shadow: 0px 10px 33px 0px rgba(78, 78, 78, 0.2);
+    border-left: 1px solid rgba(78, 78, 78, 0.2);
+    border-right: 1px solid rgba(78, 78, 78, 0.2);
+    border-bottom: 1px solid rgba(78, 78, 78, 0.2);
+    z-index: 0;
+    transition: .4s ease-in-out;
+}
+
+/* depan */
+.xl-container .front-left-side {
+    top: 35%;
+    left: 20%;
+    width: 0px;
+    height: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-style: solid;
+    border-width: 100px 150px 100px 150px;
+    border-color: transparent #fea3a8 #fe8f95 #fea3a8;
+    position: absolute;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.3) inset;
+    /* background-color: #dd7676; */
+    /* border-top-right-radius: 1000%; */
+    transition: .4s ease-in-out;
+    z-index: 5;
+}
+
+/* tutup */
+.xl-container .front-bottom-side {
+    top: 33.6%;
+    left: 19.3%;
+    width: 0px;
+    height: 0px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 130px 154px 70px 154px;
+    border-color: #fd3b3c transparent transparent transparent;
+    position: absolute;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.3) inset;
+    transform: rotateX(0deg);
+    transition: .4s ease-in-out;
+    transform-origin: 0px 3px;
+    /* color: #b80c0c; */
+    z-index: 5;
+}
+
+.xl-container svg {
+    /* border: 1px solid blue; */
+    position: absolute;
+    z-index: 3;
+    transition: .4s ease-in-out;
+}
+
+.xl-container svg:nth-child(1) {
+    top: 300px;
+    left: 200px;
+    transform: rotate(0deg);
+    opacity: 100%;
+}
+.xl-container svg:nth-child(2) {
+    top: 300px;
+    left: 200px;
+}
+.xl-container svg:nth-child(3) {
+    top: 300px;
+    left: 200px;
+}
+.xl-container svg:nth-child(4) {
+    top: 300px;
+    left: 200px;
+    transform: rotate(0deg);
+    opacity: 100%;
+}
+.xl-container svg:nth-child(5) {
+    top: 300px;
+    left: 200px;
+}
+.xl-container svg:nth-child(6) {
+    top: 300px;
+    left: 200px;
+}
+
+.xl-container .letter {
+    top: 100px;
+    left: -25px;
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    background-color: #facfeb;
+    position: absolute;
+    transform: scale(.3);
+    z-index: 2;
+    transition: .4s ease-in-out;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(184, 12, 12);
+    line-height: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(32, 32, 32, 0.1);
+}
+
+.xl-container button {
+    cursor: pointer;
+    z-index: 10;
+    padding: 13px 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    background: none;
+    border: 2px solid #fd3b3c;
+    color: #fd3b3c;
+    transition: .3s ease-in-out;
+}
+
+.xl-container button:hover {
+    background-color: #ffb6c0;
+}
+
+.xl-container button:active {
+    transform: scale(.7);
+}
+
+.xl-container .to {
+    width: 100%;
+    height: 15%;
+}
+
+.xl-container .text-content {
+    width: 100%;
+    height: 70%;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.xl-container .from {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    height: 15%;
+    text-align: end;
+}
+/* SMALL */
+.sm-container {
+    /* display flex @900px media */
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sm-container .cover {
+    cursor: pointer;
+    background-color: #fe8f95;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    font-size: 90px;
+    font-weight: 800;
+    color: #facfeb;
+    transition: 1s ease-in-out;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.sm-container .cover p {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sm-container .cover1 {
+    cursor: pointer;
+    background-color: #9c282e;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 90px;
+    font-weight: 800;
+    color: #facfeb;
+    transition: 1s ease-in-out;
+}
+
+.sm-container .cover1 p {
+    margin-top: 0px;
+    width: 500px;
+    height: 400px;
+}
+
+/* .sm-container .cover {
+    position: absolute;
+    z-index: 10;
+} */
+
+.sm-container .envelope {
+    /* border: 1px solid black; */
+    height: 500px;
+    width: 350px;
+    position: relative;
+}
+
+/* belakang */
+.sm-container .envelope .back-side {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    background: #ffb6c0;
+    width: 250px;
+    height: 150px;
+    z-index: 1;
+    transition: .4s ease-in-out;
+}
+
+/* depan */
+.sm-container .envelope .front-left-side {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    border-style: solid;
+    border-width: 80px 125px 80px 125px;
+    border-color: transparent #fea3a8 #fe8f95 #fea3a8;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.3) inset;
+    z-index: 3;
+    transition: .4s ease-in-out;
+}
+
+/* tutup */
+.sm-container .envelope .front-bottom-side {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    border-style: solid;
+    border-width: 90px 125px 70px 125px;
+    border-color: #fd3b3c transparent transparent transparent;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.3) inset;
+    transition: .5s ease-in-out;
+    transform-origin: 0px 0px;
+    z-index: 4;
+    transition: .4s ease-in-out;
+}
+
+.sm-container .envelope .letter {
+    position: absolute;
+    top: 100px;
+    width: 350px;
+    height: 280px;
+    background-color: #facfeb;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transform: scale(.5);
+    z-index: 1;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(184, 12, 12);
+    line-height: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(32, 32, 32, 0.1);
+    transition: .4s ease-in-out;
+    z-index: 2;
+    font-size: 13px;
+}
+
+.sm-container .to {
+    width: 100%;
+    height: 15%;
+}
+
+.sm-container .text-content {
+    width: 100%;
+    height: 70%;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.sm-container .from {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    height: 15%;
+    text-align: end;
+}
+
+.sm-container svg {
+    position: absolute;
+    top: 240px;
+    left: 50px;
+    transition: .5s ease-in-out;
+}
+
+.sm-container .envelope button {
+    position: absolute;
+    bottom: 100px;
+    left: 105px;
+    padding: 13px 45px;
+    background: #ffb6c0;
+    border: 2px solid #fd3b3c;
+    border-radius: 5px;
+    color: #fd3b3c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 900px) {
+    .xl-container{
+        display: none;
+    }
+
+    .sm-container {
+        display: flex;
+    }
+}
